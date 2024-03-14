@@ -83,6 +83,20 @@ export const constantRoutes = [
         meta: { title: '个人中心', icon: 'user' }
       }
     ]
+  },
+  {
+    path: '/click_me',
+    component: Layout,
+    hidden: false,
+    redirect: 'noredirect',
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/click_me/index'),
+        name: 'ClickMe',
+        meta: { title: '点我', icon: 'hand' }
+      }
+    ]
   }
 ]
 
