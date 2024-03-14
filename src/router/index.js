@@ -97,6 +97,20 @@ export const constantRoutes = [
         meta: { title: '点我', icon: 'hand' }
       }
     ]
+  },
+  {
+    path: '/echarts',
+    component: Layout,
+    hidden: false,
+    redirect: 'noredirect',
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/echarts/index'),
+        name: 'ECharts',
+        meta: { title: 'ECharts图表', icon: 'chart' }
+      }
+    ]
   }
 ]
 
